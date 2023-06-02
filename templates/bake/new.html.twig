@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bake{% endblock %}
+
+{% block body %}
+    <h1>Create new Bake</h1>
+
+    {{ include('bake/_form.html.twig') }}
+
+    <a href="{{ path('app_bake_index') }}">back to list</a>
+{% endblock %}

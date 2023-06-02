@@ -1,0 +1,74 @@
+ {% extends 'base.html.twig' %}    
+
+{% block title %}Homepage{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .hero-banner {
+            position: relative;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: transparent;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(255, 179, 128, 0.4);
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+   <header class="hero-banner d-flex align-items-center" style="background-image: url('https://images.unsplash.com/photo-1583338917451-face2751d8d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFrZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=1200&q=60'); background-size: cover; height: 100vh;">
+   <div class="banner-overlay"></div> {# overlay div  #}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1>Welcome to our Bakery</h1>
+                <p style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8)">Delicious treats made with love</p>
+             </div>
+        </div> 
+    </div>
+</header>
+
+    <section class="bakery-items">
+        <div class="container">
+            <h2 class="text-center my-5">Our Bakery Items</h2>
+            <div class="row">
+                {% for bakeryItem in bakeryItems %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="{{ bakeryItem.image }}" class="card-img-top" alt="{{ bakeryItem.name }}" style="height: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ bakeryItem.name }}</h5>
+                                <p class="card-text">{{ bakeryItem.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">&copy; {{ "now"|date("Y") }} Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}
+
+
+

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bake index{% endblock %}
+
+{% block body %}
+    <h1>Bake index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bake in bakes %}
+            <tr>
+                <td>{{ bake.id }}</td>
+                <td>{{ bake.Name }}</td>
+                <td>{{ bake.Image }}</td>
+                <td>{{ bake.Description }}</td>
+                <td>
+                    <a href="{{ path('app_bake_show', {'id': bake.id}) }}">show</a>
+                    <a href="{{ path('app_bake_edit', {'id': bake.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_bake_new') }}">Create new</a>
+{% endblock %}
