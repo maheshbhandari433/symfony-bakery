@@ -17,11 +17,11 @@ The bakery project aims to showcase a variety of bakery items and provide inform
 7. Copy the example environment file: `cp .env.example .env`
 8. Update the `.env` file with your desired configuration, including the database credentials:
 DATABASE_URL="postgresql://your-username:your-password@localhost:5432/your-database?serverVersion=15&charset=utf8"
-Replace `your-username`, `your-password`, and `your-database` with your actual PostgreSQL credentials.
-9. Generate the encryption keys: `php bin/console generate:key`
-10. Run database migrations: `php bin/console doctrine:migrations:migrate`
-11. Exit the PHP container: `exit`
-12. Access the bakery website in your browser: `http://localhost:8000`
+9. Replace `your-username`, `your-password`, and `your-database` with your actual PostgreSQL credentials.
+10. Generate the encryption keys: `php bin/console generate:key`
+11. Run database migrations: `php bin/console doctrine:migrations:migrate`
+12. Exit the PHP container: `exit`
+13. Access the bakery website in your browser: `http://localhost:8000`
 
 ## Usage
 
