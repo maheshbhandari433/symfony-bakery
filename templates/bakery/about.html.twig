@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        
+    </style>
+{% endblock %}
+
+{% block navbarBackgroundColor %}
+    #E3D8F8
+{% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+
+<section class="about-section" style="margin-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+             <div class="mx-5">
+                <img src="https://media.istockphoto.com/id/1064357768/fi/valokuva/leipomon-kaunis-naispuolinen-yritt%C3%A4j%C3%A4-seisoo-tiskin-takana-tarjoilemassa-cappuccinoa.jpg?s=612x612&w=0&k=20&c=-AlcrXmRm_0vZbvQnCRU1vCzfQLnVSF9cEYo1rEnut8=" alt="Bakery Image" class="img-fluid my-5" >
+            </div>
+            </div>
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>
+                    At our bakery, we are passionate about creating delightful and scrumptious treats for our customers.
+                    With years of experience and a team of talented bakers, we strive to bring joy to every bite.
+                    From classic favorites to unique creations, our bakery offers a wide range of delectable goodies to satisfy any sweet tooth.
+                </p>
+                <p>
+                    We source the finest ingredients, ensuring that every cake, pastry, and dessert is made with the utmost care and quality.
+                    Whether you're celebrating a special occasion or simply craving something sweet, our bakery has something for everyone.
+                    Our friendly staff is always ready to assist you in finding the perfect treat or creating a custom cake that reflects your unique style.
+                </p>
+                <p>
+                    Visit our bakery today and indulge in the irresistible flavors and tempting aromas that will transport you to dessert heaven.
+                    We take pride in delivering happiness, one bite at a time. Thank you for choosing our bakery as your go-to destination for all things sweet!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

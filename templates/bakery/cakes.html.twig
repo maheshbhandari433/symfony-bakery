@@ -1,0 +1,36 @@
+ {% extends 'base.html.twig' %}    
+
+{% block title %}Cakes{% endblock %}
+
+{% block body %}
+   <header class="hero-banner d-flex align-items-center" style="background-color: #F8D7DA; height:30vh;">
+   <div class="banner-overlay"></div> {# overlay div  #}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1>Discover Our Delicious Cakes</h1>
+                <p>Indulge in a variety of mouthwatering cakes</p>
+             </div>
+        </div> 
+    </div>
+</header>
+
+<section class="bakery-items">
+        <div class="container">
+            <h2 class="text-center my-5">Find your favourite</h2>
+            <div class="row">
+                {% for cake in cakes %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="{{ cake.image }}" class="card-img-top" alt="{{ cake.name }}" style="height: 400px;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ cake.name }}</h5>
+                                <p class="card-text">{{ cake.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endblock %}
