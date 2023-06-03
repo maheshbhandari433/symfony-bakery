@@ -25,8 +25,8 @@ DATABASE_URL="postgresql://your-username:your-password@localhost:5432/your-datab
 ## Usage
 
 1. Access the bakery website in your browser: `http://localhost:8000`
-2. Explore the different pages: homepage, cake list, about, and contact.
-3. Place orders or send inquiries using the contact form.
+2. Explore different pages: homepage, cake list, about, and contact.
+3. Send inquiries using the contact form.
 
 ## Contributing
 
